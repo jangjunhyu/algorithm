@@ -1,0 +1,17 @@
+package 올바른괄호;
+
+class Solution {
+    boolean solution(String s) {
+        int result = 0;
+        char[] c = s.toCharArray();
+        for(int i=0; i<c.length; i++){
+            if(c[i]=='(')
+                result++;
+            else
+                result--;
+            if(result<0)
+                return false;
+        }
+        return result==0;
+    }
+}
